@@ -50,6 +50,7 @@
     <Compile Include="SimpleMatching.cs" />
     <Compile Include="Skill.cs" />
     <Compile Include="Team.cs" />
+    <Compile Include="WeightedMatching.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

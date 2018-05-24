@@ -23,63 +23,64 @@ namespace Matching1
             Skill skill14 = new Skill("Test14");
             Skill skill15 = new Skill("Test15");
             
-            Criterion crit01 = new Criterion("Test01");
-            Criterion crit02 = new Criterion("Test02");
-            Criterion crit03 = new Criterion("Test03");
-            Criterion crit04 = new Criterion("Test04");
-            Criterion crit05 = new Criterion("Test05");
-            Criterion crit06 = new Criterion("Test06");
-            Criterion crit07 = new Criterion("Test07");
-            Criterion crit08 = new Criterion("Test08");
-            Criterion crit09 = new Criterion("Test09");
-            Criterion crit10 = new Criterion("Test10");
-            Criterion crit11 = new Criterion("Test11");
-            Criterion crit12 = new Criterion("Test12");
-            Criterion crit13 = new Criterion("Test13");
-            Criterion crit14 = new Criterion("Test14");
-            Criterion crit15 = new Criterion("Test15");
+            Criterion crit01 = new Criterion("Test01", 10);
+            Criterion crit02 = new Criterion("Test02", 10);
+            Criterion crit03 = new Criterion("Test03", 10);
+            Criterion crit04 = new Criterion("Test04", 25);
+            Criterion crit05 = new Criterion("Test05", 10);
+            Criterion crit06 = new Criterion("Test06", 25);
+            Criterion crit07 = new Criterion("Test07", 10);
+            Criterion crit08 = new Criterion("Test08", 10);
+            Criterion crit09 = new Criterion("Test09", 10);
+            Criterion crit10 = new Criterion("Test10", 10);
+            Criterion crit11 = new Criterion("Test11", 10);
+            Criterion crit12 = new Criterion("Test12", 10);
+            Criterion crit13 = new Criterion("Test13", 10);
+            Criterion crit14 = new Criterion("Test14", 10);
+            Criterion crit15 = new Criterion("Test15", 10);
             
             List<Criterion> critlist = new List<Criterion>();
             List<Skill> skilllist = new List<Skill>();
             
-            critlist.Add(crit01);
+//            critlist.Add(crit01);
             critlist.Add(crit02);
             critlist.Add(crit03);
             critlist.Add(crit04);
             critlist.Add(crit05);
             critlist.Add(crit06);
             critlist.Add(crit07);
-            critlist.Add(crit08);
+//            critlist.Add(crit08);
             critlist.Add(crit09);
-            critlist.Add(crit10);
-            critlist.Add(crit11);
-            critlist.Add(crit12);
-            critlist.Add(crit13);
-            critlist.Add(crit14);
-            critlist.Add(crit15);
+//            critlist.Add(crit10);
+//            critlist.Add(crit11);
+//            critlist.Add(crit12);
+//            critlist.Add(crit13);
+//            critlist.Add(crit14);
+//            critlist.Add(crit15);
             
             skilllist.Add(skill01);
             skilllist.Add(skill02);
             skilllist.Add(skill03);
             skilllist.Add(skill04);
             skilllist.Add(skill05);
-            skilllist.Add(skill06);
+//            skilllist.Add(skill06);
             skilllist.Add(skill07);
             skilllist.Add(skill08);
             skilllist.Add(skill09);
             skilllist.Add(skill10);
-            skilllist.Add(skill11);
-            skilllist.Add(skill12);
-            skilllist.Add(skill13);
-            skilllist.Add(skill14);
-            skilllist.Add(skill15);
+//            skilllist.Add(skill11);
+//            skilllist.Add(skill12);
+//            skilllist.Add(skill13);
+//            skilllist.Add(skill14);
+//            skilllist.Add(skill15);
 
             
             
             Project project = new Project(critlist, "Dutch");
             Team team = new Team(skilllist, "Dutch");
 
-            Console.WriteLine(SimpleMatching.DoSimpleMatching(team, project));
+            Console.WriteLine("Simple matching percentage: " + SimpleMatching.DoSimpleMatching(team, project));
+            Console.WriteLine("Weighted matching percentage: " + WeightedMatching.DoWeightedMatching(team, project));
         }
     }
 }

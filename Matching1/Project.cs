@@ -57,5 +57,16 @@ namespace Matching1
         {
             return this.language;
         }
+
+        public int TotalWeight()
+        {
+            int result = 0;
+            foreach (Criterion crit in criteria)
+            {
+                result += crit.GetWeight();
+            }
+
+            return result;
+        }
     }
 }

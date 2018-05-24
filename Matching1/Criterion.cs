@@ -39,5 +39,10 @@ namespace Matching1
         {
             return this.NameProperty;
         }
+
+        public int GetWeight()
+        {
+            return this.weight;
+        }
     }
 }

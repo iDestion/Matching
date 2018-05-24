@@ -30,7 +30,7 @@ namespace Matching1
                     if (team.HasSkill(criterion))
                     {
                         score += 100 / max;
-                        Console.WriteLine(score);
+                        Console.WriteLine("Simple score: " + score);
                     }
                 }
                 result.Add(team, score);
