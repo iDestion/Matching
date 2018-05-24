@@ -59,5 +59,10 @@ namespace Matching1
                 throw new ArgumentException();
             }
         }
+
+        public string GetLanguage()
+        {
+            return this.language;
+        }
     }
 }

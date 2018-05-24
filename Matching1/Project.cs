@@ -52,5 +52,10 @@ namespace Matching1
         {
             return this.criteria.Count;
         }
+        
+        public string GetLanguage()
+        {
+            return this.language;
+        }
     }
 }

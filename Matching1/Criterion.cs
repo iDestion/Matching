@@ -25,6 +25,11 @@ namespace Matching1
             this.weight = weight;
         }
 
+        public Criterion(String name)
+        {
+            this.name = name;
+        }
+
         public bool Equals(ICompetency comp)
         {
             return this.NameProperty == comp.NameProperty;
