@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Matching1
 {
-    class Team
+    public class Team
     {
         //Required for matching. Null is caught, won't happen in practise.
         private List<Skill> skills;
@@ -19,6 +19,19 @@ namespace Matching1
         {
             this.skills = skills;
             this.language = language;
+        }
+
+        public Boolean HasSkill(ICompetency competency)
+        {
+            foreach (Skill skill in skills)
+            {
+                if (skill.Equals(competency))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
 

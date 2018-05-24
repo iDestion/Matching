@@ -2,7 +2,7 @@
 
 namespace Matching1
 {
-    class Skill : ICompetency
+    public class Skill : ICompetency
     {
         public string NameProperty { get; set; }
 

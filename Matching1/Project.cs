@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Matching1
 {
-    class Project
+    public class Project
     {
         //Required for matching. Null is caught, can happen in practise
         private List<Criterion> criteria;
@@ -19,6 +19,11 @@ namespace Matching1
         //Misc. information about project, LFLS
         
         //End of misc. information
+
+        public List<Criterion> GetCriteria()
+        {
+            return this.criteria;
+        }
 
         public Project(List<Criterion> criteria, string language)
         {
@@ -41,6 +46,11 @@ namespace Matching1
             {
                 throw new ArgumentException();
             }
+        }
+
+        public int GetCount()
+        {
+            return this.criteria.Count;
         }
     }
 }

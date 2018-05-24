@@ -5,24 +5,24 @@ namespace Matching1
     public class Criterion : ICompetency
     {
 
-        private int _weight;
-        private string _name;
+        private int weight;
+        private string name;
         public string NameProperty
         {
             get
             {
-                return _name;
+                return name;
             }
             set
             {
-                _name = value;
+                name = value;
             }
         }
 
         public Criterion(string name, int weight)
         {
-            this._name = name;
-            this._weight = weight;
+            this.name = name;
+            this.weight = weight;
         }
 
         public bool Equals(ICompetency comp)
