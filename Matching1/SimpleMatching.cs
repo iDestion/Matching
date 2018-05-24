@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//Simplematching scores every ICompetency equally.
+
 namespace Matching1
 {
     public static class SimpleMatching
