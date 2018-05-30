@@ -7,18 +7,21 @@ namespace Matching1
     {
         //Required for matching. Null is caught, won't happen in practise.
         private List<Skill> skills;
+        
+        //Boolean, determines if team is African or European (experienced in projectmanagement or not)
+        private bool isAfrican;
 
         //Language --> Hard exclusion if no match with other team/project
-        private string language;
+        private List<String> languages;
 
         //Personal information, LFLS
         
         //End of personal information
         
-        public Team(List<Skill> skills, string language)
+        public Team(List<Skill> skills, List<String> languages)
         {
             this.skills = skills;
-            this.language = language;
+            this.languages = languages;
         }
 
         public Boolean HasSkill(ICompetency competency)
@@ -60,9 +63,14 @@ namespace Matching1
             }
         }
 
-        public string GetLanguage()
+        public List<String> GetLanguages()
         {
-            return this.language;
+            return this.languages;
+        }
+
+        public void AddLanguage(string language)
+        {
+            this.languages.Add(language);
         }
     }
 }

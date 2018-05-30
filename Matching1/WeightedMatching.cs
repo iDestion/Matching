@@ -8,6 +8,12 @@ namespace Matching1
     {
         public static float DoWeightedMatching(Team team, Project project)
         {
+
+            if (!team.GetLanguages().Contains(project.GetLanguage()))
+            {
+                Console.WriteLine("Language not compatible.");
+                return 0;
+            }
             //Total weight of the criteria.
             float maxweight = project.TotalWeight();
             Console.WriteLine("Total weight: " + maxweight);

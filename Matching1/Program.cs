@@ -76,8 +76,11 @@ namespace Matching1
 
             
             
-            Project project = new Project(critlist, "Dutch");
-            Team team = new Team(skilllist, "Dutch");
+            Project project = new Project(critlist, "German");
+            List<String> list = new List<string>();
+            list.Add("Dutch");
+//            list.Add("German");
+            Team team = new Team(skilllist, list);
 
             Console.WriteLine("Simple matching percentage: " + SimpleMatching.DoSimpleMatching(team, project));
             Console.WriteLine("Weighted matching percentage: " + WeightedMatching.DoWeightedMatching(team, project));
