@@ -72,5 +72,10 @@ namespace Matching1
         {
             this.languages.Add(language);
         }
+
+        public bool GetOrigin()
+        {
+            return this.isAfrican;
+        }
     }
 }

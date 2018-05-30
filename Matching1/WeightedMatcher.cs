@@ -4,7 +4,7 @@ using System;
 
 namespace Matching1
 {
-    public static class WeightedMatching
+    public static class WeightedMatcher
     {
         public static float DoWeightedMatching(Team team, Project project)
         {

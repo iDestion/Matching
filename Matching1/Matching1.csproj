@@ -42,16 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Match.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Criterion.cs" />
     <Compile Include="ICompetency.cs" />
-    <Compile Include="SimpleMatching.cs" />
+    <Compile Include="SimpleMatcher.cs" />
     <Compile Include="Skill.cs" />
     <Compile Include="Team.cs" />
-    <Compile Include="TwoFactorMatching.cs" />
-    <Compile Include="WeightedMatching.cs" />
+    <Compile Include="TwoFactorMatcher.cs" />
+    <Compile Include="WeightedMatcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

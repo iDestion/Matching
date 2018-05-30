@@ -82,8 +82,8 @@ namespace Matching1
 //            list.Add("German");
             Team team = new Team(skilllist, list);
 
-            Console.WriteLine("Simple matching percentage: " + SimpleMatching.DoSimpleMatching(team, project));
-            Console.WriteLine("Weighted matching percentage: " + WeightedMatching.DoWeightedMatching(team, project));
+            Console.WriteLine("Simple matching percentage: " + SimpleMatcher.DoSimpleMatching(team, project));
+            Console.WriteLine("Weighted matching percentage: " + WeightedMatcher.DoWeightedMatching(team, project));
         }
     }
 }

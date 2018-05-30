@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Matching1
 {
-    public static class SimpleMatching
+    public static class SimpleMatcher
     {
         public static Dictionary<Team, int> DoSimpleMatching(List<Team> teams, Project project)
         {
