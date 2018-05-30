@@ -42,37 +42,37 @@ namespace Matching1
             List<Criterion> critlist = new List<Criterion>();
             List<Skill> skilllist = new List<Skill>();
             
-//            critlist.Add(crit01);
+            critlist.Add(crit01);
             critlist.Add(crit02);
             critlist.Add(crit03);
             critlist.Add(crit04);
             critlist.Add(crit05);
             critlist.Add(crit06);
             critlist.Add(crit07);
-//            critlist.Add(crit08);
+            critlist.Add(crit08);
             critlist.Add(crit09);
-//            critlist.Add(crit10);
-//            critlist.Add(crit11);
-//            critlist.Add(crit12);
-//            critlist.Add(crit13);
-//            critlist.Add(crit14);
-//            critlist.Add(crit15);
+            critlist.Add(crit10);
+            critlist.Add(crit11);
+            critlist.Add(crit12);
+            critlist.Add(crit13);
+            critlist.Add(crit14);
+            critlist.Add(crit15);
             
             skilllist.Add(skill01);
             skilllist.Add(skill02);
             skilllist.Add(skill03);
             skilllist.Add(skill04);
             skilllist.Add(skill05);
-//            skilllist.Add(skill06);
+            skilllist.Add(skill06);
             skilllist.Add(skill07);
-            skilllist.Add(skill08);
-            skilllist.Add(skill09);
-            skilllist.Add(skill10);
+//            skilllist.Add(skill08);
+//            skilllist.Add(skill09);
+//            skilllist.Add(skill10);
 //            skilllist.Add(skill11);
 //            skilllist.Add(skill12);
 //            skilllist.Add(skill13);
-//            skilllist.Add(skill14);
-//            skilllist.Add(skill15);
+            skilllist.Add(skill14);
+            skilllist.Add(skill15);
 
             
             

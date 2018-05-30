@@ -11,7 +11,7 @@ namespace Matching1
         {
             
             //Meeting all the requirements means a 100% match.
-            //TODO implement matching with decimals
+            //TODO implement matching with decimals LFLS
             int max = project.GetCount();
             int score;
             Dictionary<Team, int> result = new Dictionary<Team, int>();
@@ -48,7 +48,7 @@ namespace Matching1
                 if (team.HasSkill(criterion))
                 {
                     score += 100 / max;
-                    Console.WriteLine(score);
+                    Console.WriteLine("Simple score: " + score);
                 }
             }
 

@@ -9,12 +9,10 @@ namespace Matching1
         public static float DoWeightedMatching(Team team, Project project)
         {
             //Total weight of the criteria.
-            int maxweight = project.TotalWeight();
+            float maxweight = project.TotalWeight();
             Console.WriteLine("Total weight: " + maxweight);
             //Score will consist of the added weights of the skills the team has.
-            int score = 0;
-            
-            Console.WriteLine(maxweight);
+            float score = 0;
 
             foreach (Criterion crit in project.GetCriteria())
             {
@@ -25,8 +23,7 @@ namespace Matching1
                 }
             }
 
-            //TODO fix when total weight > 100
-            return 100 / maxweight * score;
+            return 100 * score / maxweight;
         }
     }
 }
