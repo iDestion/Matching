@@ -1,4 +1,6 @@
-﻿using System.Runtime.InteropServices.WindowsRuntime;
+﻿using System;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Microsoft.SqlServer.Server;
 
 namespace Matching1
 {
@@ -15,19 +17,26 @@ namespace Matching1
             this.project = project;
         }
 
-        public Team getEuTeam()
+        public Team GetEuTeam()
         {
             return this.euTeam;
         }
 
-        public Team getAfTeam()
+        public Team GetAfTeam()
         {
             return this.afTeam;
         }
 
-        public Project getProject()
+        public Project GetProject()
         {
             return this.project;
+        }
+
+        public override String ToString()
+        {
+            String res = "Eu: " + euTeam.GetName() + ", AF: " + afTeam.GetName() + ", proj: " + project.GetName();
+            Console.WriteLine(res);
+            return res;
         }
     }
 }

@@ -16,7 +16,8 @@ namespace Matching1
         //Language --> Hard exclusion if no match between teams and project
         private string language;
         
-        //Misc. information about project, LFLS
+        //Misc. information about project, besides name LFLS
+        private String name;
         
         //End of misc. information
 
@@ -25,10 +26,11 @@ namespace Matching1
             return this.criteria;
         }
 
-        public Project(List<Criterion> criteria, string language)
+        public Project(List<Criterion> criteria, string language, String name)
         {
             this.criteria = criteria;
             this.language = language;
+            this.name = name;
         }
 
         public void AddCriterion(Criterion criterion)
@@ -67,6 +69,11 @@ namespace Matching1
             }
 
             return result;
+        }
+
+        public String GetName()
+        {
+            return this.name;
         }
     }
 }

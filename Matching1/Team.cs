@@ -14,14 +14,25 @@ namespace Matching1
         //Language --> Hard exclusion if no match with other team/project
         private List<String> languages;
 
-        //Personal information, LFLS
+        //Personal information, besides name LFLS
+        private String name;
         
         //End of personal information
         
+        //Method to make team without considering the origin
         public Team(List<Skill> skills, List<String> languages)
         {
             this.skills = skills;
             this.languages = languages;
+        }
+        
+        //Proper method for creating team to be able to do twofactormatching
+        public Team(List<Skill> skills, List<String> languages, bool isAfrican, String name)
+        {
+            this.skills = skills;
+            this.languages = languages;
+            this.isAfrican = isAfrican;
+            this.name = name;
         }
 
         public Boolean HasSkill(ICompetency competency)
@@ -72,10 +83,16 @@ namespace Matching1
         {
             this.languages.Add(language);
         }
-
+        
+        //Returns true if the team originates in Africa
         public bool GetOrigin()
         {
             return this.isAfrican;
+        }
+
+        public String GetName()
+        {
+            return this.name;
         }
     }
 }
