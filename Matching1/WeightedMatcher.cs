@@ -6,7 +6,7 @@ namespace Matching1
 {
     public static class WeightedMatcher
     {
-        public static float DoWeightedMatching(Team team, Project project)
+        public static float DoMatching(Team team, Project project)
         {
 
             if (!team.GetLanguages().Contains(project.GetLanguage()))

@@ -7,7 +7,7 @@ namespace Matching1
 {
     public static class SimpleMatcher
     {
-        public static Dictionary<Team, int> DoSimpleMatching(List<Team> teams, Project project)
+        public static Dictionary<Team, int> DoMatching(List<Team> teams, Project project)
         {
             
             //Meeting all the requirements means a 100% match.
@@ -39,7 +39,7 @@ namespace Matching1
             return result;
         }
 
-        public static int DoSimpleMatching(Team team, Project project)
+        public static int DoMatching(Team team, Project project)
         {
             int max = project.GetCount();
             int score = 0;
