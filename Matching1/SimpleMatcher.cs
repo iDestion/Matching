@@ -7,19 +7,20 @@ namespace Matching1
 {
     public static class SimpleMatcher
     {
+        [Obsolete("Class has been replaced by more sophisticated alternatives", true)]
         public static Dictionary<Team, int> DoMatching(List<Team> teams, Project project)
         {
             
             //Meeting all the requirements means a 100% match.
-            //TODO implement matching with decimals LFLS
+            //Improvements to Simplematcher have been scrapped, class has become deprecated
             int max = project.GetCount();
             int score;
             Dictionary<Team, int> result = new Dictionary<Team, int>();
             
-            //TODO implement more efficient way of matching, remove nested foreach, LFLS
+            //Improvements to Simplematcher have been scrapped, class has become deprecated
             foreach (Team team in teams)
             {
-                //TODO make languages list and implement check
+                //Languages have not been implemented in Simplematcher, class has become deprecated
 //                if (team.GetLanguage() != project.GetLanguage())
 //                {
 //                    result.Add(team, 0);
