@@ -10,6 +10,9 @@ namespace Matching1
         private List<Team> afTeams;
         private Project project;
         
+        
+        //TODO change matcher to static class or singleton
+        
         public TwoFactorMatcher(List<Team> teams, Project project)
         {
             euTeams = new List<Team>();
@@ -24,7 +27,29 @@ namespace Matching1
                 {
                     euTeams.Add(team);
                 }
-            }    
+            }
+        }
+
+        //Two methods for refreshing the matcher
+        public void Refresh(List<Team> teams)
+        {
+            euTeams = new List<Team>();
+            afTeams = new List<Team>();
+            foreach (Team team in teams)
+            {
+                if (team.GetOrigin())
+                {
+                    afTeams.Add(team);
+                } else if (!team.GetOrigin())
+                {
+                    euTeams.Add(team);
+                }
+            }
+        }
+
+        public void Refresh(Project project)
+        {
+            this.project = project;
         }
 
         public Match DoMatching()
