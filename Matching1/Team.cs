@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace Matching1
 {
@@ -19,6 +20,9 @@ namespace Matching1
         
         //End of personal information
         
+        //id for database
+        private int id;
+        
         //Method to make team without considering the origin
         public Team(List<Skill> skills, List<String> languages)
         {
@@ -33,6 +37,15 @@ namespace Matching1
             this.languages = languages;
             this.isAfrican = isAfrican;
             this.name = name;
+        }
+        
+        public Team(List<Skill> skills, List<String> languages, bool isAfrican, String name, int id)
+        {
+            this.skills = skills;
+            this.languages = languages;
+            this.isAfrican = isAfrican;
+            this.name = name;
+            this.id = id;
         }
 
         public Boolean HasSkill(ICompetency competency)
@@ -93,6 +106,11 @@ namespace Matching1
         public String GetName()
         {
             return this.name;
+        }
+        
+        public int getId()
+        {
+            return this.id;
         }
     }
 }

@@ -21,6 +21,9 @@ namespace Matching1
         
         //End of misc. information
 
+        //id for database
+        private int id;
+
         public List<Criterion> GetCriteria()
         {
             return this.criteria;
@@ -31,6 +34,14 @@ namespace Matching1
             this.criteria = criteria;
             this.language = language;
             this.name = name;
+        }
+        
+        public Project(List<Criterion> criteria, string language, String name, int id)
+        {
+            this.criteria = criteria;
+            this.language = language;
+            this.name = name;
+            this.id = id;
         }
 
         public void AddCriterion(Criterion criterion)
@@ -74,6 +85,11 @@ namespace Matching1
         public String GetName()
         {
             return this.name;
+        }
+
+        public int getId()
+        {
+            return this.id;
         }
     }
 }

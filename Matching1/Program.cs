@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Matching1
 {
@@ -48,15 +50,47 @@ namespace Matching1
             match.ToString();
             
             
+            //Database testing
+            MySqlConnection conn = new MySqlConnection();
+           
+            conn.ConnectionString =
+                "Data Source=micksneekes.nl;" +
+                "Initial Catalog=ftfs;" +
+                "User id=root;" +
+                "Password=Qwerty@123;" +
+                "SslMode=none";
+            try
+            {
+                conn.Open();
+                Console.WriteLine("Connection established to database.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+            String query = "SELECT * FROM project";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                
+            }
+            reader.Close();
             
             
             
             
+            
+            
+            
+            //Websockets
             WebServer ws = new WebServer(SendResponse, "http://localhost:8080/test/");
             ws.Run();
             Console.WriteLine("A simple webserver. Press a key to quit.");
             Console.ReadKey();
             ws.Stop();
+            conn.Close();
         }
 
         public static string SendResponse(HttpListenerRequest request)
