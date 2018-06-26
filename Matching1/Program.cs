@@ -82,8 +82,9 @@ namespace Matching1
 //            }
 //            reader.close();
             
-            DbUtils.DoFetch(conn);
-            DbUtils.StoreMatch(match, conn);
+            DbUtils.SetConn(conn);
+            DbUtils.DoFetch();
+            DbUtils.StoreMatch(match);
             
             
             

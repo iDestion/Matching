@@ -6,7 +6,14 @@ namespace Matching1
 {
     public static class DbUtils
     {
-        public static void DoFetch(MySqlConnection conn)
+        private static MySqlConnection conn;
+
+        public static void SetConn(MySqlConnection connect)
+        {
+            conn = connect;
+        }
+        
+        public static void DoFetch()
         {
             String projquery = "SELECT * FROM project";
             String teamquery = "SElECT * FROM team";
@@ -53,7 +60,7 @@ namespace Matching1
             
         }
 
-        public static void StoreMatch(Match match, MySqlConnection conn)
+        public static void StoreMatch(Match match)
         {
             
             //Handle simple match storing
