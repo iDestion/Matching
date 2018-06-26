@@ -34,12 +34,12 @@ namespace Matching1
             skilllist.Add(skill04);
             
             
-            Project project = new Project(critlist, "German", "Ziekenhuis Project");
+            Project project = new Project(critlist, "German", "Ziekenhuis Project", 564);
             List<String> langlist = new List<string>();
             langlist.Add("Dutch");
             langlist.Add("German");
-            Team euteam = new Team(skilllist, langlist, false, "van den Berg ICT");
-            Team afteam = new Team(skilllist, langlist, true, "Okafor Solutions");
+            Team euteam = new Team(skilllist, langlist, false, "van den Berg ICT", 130, true);
+            Team afteam = new Team(skilllist, langlist, true, "Okafor Solutions", 131, true);
             
             List<Team> teams = new List<Team>();
             teams.Add(euteam);
@@ -83,6 +83,9 @@ namespace Matching1
 //            reader.close();
             
             DbUtils.DoFetch(conn);
+            DbUtils.StoreMatch(match, conn);
+            
+            
             
             
             

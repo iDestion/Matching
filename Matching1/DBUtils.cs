@@ -55,10 +55,13 @@ namespace Matching1
 
         public static void StoreMatch(Match match, MySqlConnection conn)
         {
-            String query = "INSERT INTO match (p_id, t1_id, t2_id) VALUES " + match.GetProject().getId() +
-                           ", " + match.GetEuTeam().getId() + ", " + match.GetAfTeam().getId();
             
-            MySqlCommand cmd = new MySqlCommand(query, conn);
+            //Handle simple match storing
+            MySqlCommand cmd = new MySqlCommand("", conn);
+            cmd.CommandText = "INSERT INTO `match` (`p_id`, `t1_id`, `t2_id`) VALUES (?p_id,?t1_id,?t2_id)";
+            cmd.Parameters.Add("?p_id", MySqlDbType.Int32).Value = match.GetProject().getId();
+            cmd.Parameters.Add("?t1_id", MySqlDbType.Int32).Value = match.GetAfTeam().getId();
+            cmd.Parameters.Add("?t2_id", MySqlDbType.Int32).Value = match.GetEuTeam().getId();
 
             cmd.ExecuteNonQuery();
         }
