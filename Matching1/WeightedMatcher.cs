@@ -20,6 +20,10 @@ namespace Matching1
             //Score will consist of the added weights of the skills the team has.
             float score = 0;
 
+            if (project.GetCriteria() == null)
+            {
+                return 100;
+            }
             foreach (Criterion crit in project.GetCriteria())
             {
                 if (team.HasSkill(crit))

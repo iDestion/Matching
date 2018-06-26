@@ -23,6 +23,9 @@ namespace Matching1
         //id for database
         private int id;
         
+        //boolean that determines if a team is available for matching
+        private bool isAvailable;
+        
         //Method to make team without considering the origin
         public Team(List<Skill> skills, List<String> languages)
         {
@@ -39,13 +42,14 @@ namespace Matching1
             this.name = name;
         }
         
-        public Team(List<Skill> skills, List<String> languages, bool isAfrican, String name, int id)
+        public Team(List<Skill> skills, List<String> languages, bool isAfrican, String name, int id, bool isAvailable)
         {
             this.skills = skills;
             this.languages = languages;
             this.isAfrican = isAfrican;
             this.name = name;
             this.id = id;
+            this.isAvailable = isAvailable;
         }
 
         public Boolean HasSkill(ICompetency competency)

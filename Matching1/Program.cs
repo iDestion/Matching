@@ -50,7 +50,7 @@ namespace Matching1
             match.ToString();
             
             
-            //Database testing
+            //Database
             MySqlConnection conn = new MySqlConnection();
            
             conn.ConnectionString =
@@ -69,18 +69,20 @@ namespace Matching1
                 Console.WriteLine(e.ToString());
             }
 
-            String query = "SELECT * FROM project";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                
-            }
-            reader.Close();
+//            String query = "SELECT * FROM project";
+//            MySqlCommand command = new MySqlCommand(query, conn);
+//            MySqlDataReader reader = command.ExecuteReader();
+//            while (reader.Read())
+//            {
+//                Console.WriteLine(reader.GetString("id"));
+//                Console.WriteLine(reader.GetString("name"));
+//                Console.WriteLine(reader.GetString("description"));
+//                Console.WriteLine(reader.GetString("language"));
+//                
+//            }
+//            reader.close();
             
-            
-            
-            
+            DbUtils.DoFetch(conn);
             
             
             
