@@ -26,5 +26,19 @@ namespace Matching1
         {
             return projects;
         }
+
+
+        public static Project getProjectById(int id)
+        {
+            foreach (Project proj in projects)
+            {
+                if (proj.getId() == id)
+                {
+                    return proj;
+                }
+            }
+
+            return null;
+        }
     }
 }

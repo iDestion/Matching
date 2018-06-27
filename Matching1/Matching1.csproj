@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Data.cs" />
     <Compile Include="DBUtils.cs" />
+    <Compile Include="Httpserver.cs" />
     <Compile Include="Match.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs" />
@@ -60,7 +61,6 @@
     <Compile Include="Skill.cs" />
     <Compile Include="Team.cs" />
     <Compile Include="TwoFactorMatcher.cs" />
-    <Compile Include="WebServer.cs" />
     <Compile Include="WeightedMatcher.cs" />
   </ItemGroup>
   <ItemGroup>
