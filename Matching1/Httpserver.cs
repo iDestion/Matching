@@ -63,6 +63,8 @@ namespace Matching1
                 TwoFactorMatcher matcher = new TwoFactorMatcher(Data.GetTeams(), Data.getProjectById(Int32.Parse(id)));
                 Match match = matcher.DoMatching();
                 
+                DbUtils.StoreMatch(match);
+                
                 byte[] page = Encoding.UTF8.GetBytes(match.ToString());
                 response.ContentLength64 = page.Length;
                 Stream output = response.OutputStream;
